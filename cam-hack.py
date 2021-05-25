@@ -60,7 +60,7 @@ _________       __
 \033[1;31m28)\033[1;37mIndonesia                   \033[1;31m58)\033[1;37mNew Zealand           \033[1;31m88)\033[1;37mNepal
 \033[1;31m29)\033[1;37mDenmark                     \033[1;31m59)\033[1;37mBangladeh             \033[1;31m89)\033[1;37mPeru
 \033[1;31m30)\033[1;37mArgentina                   \033[1;31m60)\033[1;37mPanama                \033[1;31m90)\033[1;37mUruguay
-                                                        \033[1;31m91)\033[1;37mExtra            \033[1;31m92)\033[1;37mPakistan
+                                                        \033[1;31m91)\033[1;37mExtra           
 """)
 
 
@@ -1881,26 +1881,6 @@ try:
         try:
             headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:68.0) Gecko/20100101 Firefox/68.0'}       
             for page in range (0,16):
-			
-                url = ("https://www.insecam.org/en/bycountry/-/?page="+str(page))
-            
-                res = requests.get(url, headers=headers)
-                findip = re.findall('http://\d+.\d+.\d+.\d+:\d+', res.text)
-                count = 0
-                                
-                for _ in findip:
-                     hasil = findip[count]
-
-                     print ("\033[1;31m",hasil)
-                 
-                     count += 1
-        except:
-            print (" ")
-  elif num == 92:
-        print("\n")		
-        try:
-            headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:68.0) Gecko/20100101 Firefox/68.0'}       
-            for page in range (0,192):
 			
                 url = ("https://www.insecam.org/en/bycountry/-/?page="+str(page))
             
